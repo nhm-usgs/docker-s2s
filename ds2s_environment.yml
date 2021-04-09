@@ -1,0 +1,12 @@
+name: dockers2s
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pip
+  - geopandas
+  - pandas
+  - netcdf4
+  - numpy
+  - xarray
+  - metpy
