@@ -40,7 +40,7 @@ RUN conda clean -a
 ENV NHM_SOURCE_DIR=/usr/local/src
 
 # download and install gridmetetl_s2s
-ARG VERSION_GRIDMETETL_S2S=0.1.1
+ARG VERSION_GRIDMETETL_S2S=0.2.0
 RUN wget --no-check-certificate -P $NHM_SOURCE_DIR https://github.com/rmcd-mscb/gridmet_cfsv2/archive/refs/tags/$VERSION_GRIDMETETL_S2S.tar.gz
 RUN cd $NHM_SOURCE_DIR && tar -xzf $VERSION_GRIDMETETL_S2S.tar.gz
 RUN mv $NHM_SOURCE_DIR/gridmet_cfsv2-$VERSION_GRIDMETETL_S2S $NHM_SOURCE_DIR/gridmet_cfsv2
@@ -49,7 +49,7 @@ RUN cd $NHM_SOURCE_DIR/gridmet_cfsv2 && pip --trusted-host pypi.org --trusted-ho
 RUN rm $NHM_SOURCE_DIR/$VERSION_GRIDMETETL_S2S.tar.gz
 
 #download and install grid2shp
-ARG VERSION_GRD2SHP=0.1.4
+ARG VERSION_GRD2SHP=0.2.0
 RUN wget --no-check-certificate -P $NHM_SOURCE_DIR https://github.com/nhm-usgs/grd2shp/archive/refs/tags/$VERSION_GRD2SHP.tar.gz
 RUN cd $NHM_SOURCE_DIR && tar -xzf $VERSION_GRD2SHP.tar.gz
 RUN mv $NHM_SOURCE_DIR/grd2shp-$VERSION_GRD2SHP $NHM_SOURCE_DIR/grid2shp

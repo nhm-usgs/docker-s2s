@@ -14,4 +14,5 @@
      -t ensemble -s /nhm/gridmetetl/nhm_hru_data_gfv11/GFv1.1_v2e_geographic.shp \
      -w /nhm/gridmetetl/nhm_hru_data_gfv11/tmp_Gridmet_weights_hru_v1_1e.csv \
      -o /nhm/NHM-PRMS_CONUS_GF_1_1/input \
-     -e /nhm/gridmetetl/nhm_hru_data_gfv11/package.gpkg
+     -e /nhm/gridmetetl/nhm_hru_data_gfv11/package.gpkg \
+     -i area_weighted_mean
