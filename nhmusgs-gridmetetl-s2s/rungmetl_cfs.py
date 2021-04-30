@@ -82,11 +82,17 @@ def main():
         ds5 = m.srad
         ds6 = m.specific_humidity
     elif etype == 1:
+        print('extracting tmax')
         ds1 = m.tmax.median(dim='time')
+        print('extracting tmin')
         ds2 = m.tmin.median(dim='time')
+        print('extracting prcp')
         ds3 = m.prcp.mean(dim='time')
+        print('extracting ws')
         ds4 = m.wind_speed.median(dim='time')
+        print('extracting srad')
         ds5 = m.srad.median(dim='time')
+        print('extracting humidity')
         ds6 = m.specific_humidity.median(dim='time')
 
     dat = [ds1, ds2, ds3, ds4, ds5, ds6]
